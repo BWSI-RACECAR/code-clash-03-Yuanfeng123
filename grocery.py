@@ -34,11 +34,14 @@ class Solution:
         # return: list
 
         # TODO: Write code below to return a list with the solution to the prompt
-        arr1 = str1.split("")
-        arr2 = str2.split("")
+        arr1 = str1.split(" ")
+        arr2 = str2.split(" ")
         for i in range(len(arr2)):
-            if arr2[i] not in arr1:
-                arr1.append(arr2[i])
+            if arr2[i] not in arr1 and arr2[i] is not "\r":
+                if arr2[i][-1] == "\r":
+                    arr1.append(arr2[i][0:-1])
+                else:
+                    arr1.append(arr2[i])
         return arr1
 
 def main():
