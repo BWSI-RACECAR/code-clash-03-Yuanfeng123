@@ -42,9 +42,15 @@ class Solution:
             res.append(arr1[i])
         for j in range(len(arr2)):
             arr2[j] = arr2[j].strip("\r")
-            if arr2[j] not in arr1:
+            if arr2[j] not in res:
                 res.append(arr2[j])
         return res
+        # res = []
+        # arr1 = str1.split(" ")
+        # arr1[len(arr1)-1] = arr1[len(arr1) - 1].strip()
+        # arr2 = str2.split(" ")
+        # arr2[len(arr2) - 1] = arr2[len(arr2) - 1].strip()
+        # for item in arr1
         
 
 def main():
