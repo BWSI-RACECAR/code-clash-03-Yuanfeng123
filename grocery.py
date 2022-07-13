@@ -36,14 +36,15 @@ class Solution:
         # TODO: Write code below to return a list with the solution to the prompt
         arr1 = str1.split(" ")
         arr2 = str2.split(" ")
-        res = set()
+        res = []
         for i in range(len(arr1)):
             arr1[i] = arr1[i].strip("\r")
-            res.add(arr1[i])
+            res.append(arr1[i])
         for j in range(len(arr2)):
             arr2[j] = arr2[j].strip("\r")
-            res.add(arr2[j])
-        return list(res)
+            if arr2[j] not in arr1:
+                res.append(arr2[j])
+        
 
 def main():
     string1 = input()
