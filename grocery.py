@@ -44,6 +44,7 @@ class Solution:
             arr2[j] = arr2[j].strip("\r")
             if arr2[j] not in arr1:
                 res.append(arr2[j])
+        return res
         
 
 def main():
