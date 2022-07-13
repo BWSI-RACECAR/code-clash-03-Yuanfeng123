@@ -36,7 +36,7 @@ class Solution:
         # TODO: Write code below to return a list with the solution to the prompt
         arr1 = str1.split(" ")
         arr2 = str2.split(" ")
-        res = {}
+        res = set()
         for i in range(len(arr1)):
             arr1[i] = arr1[i].strip("\r")
             res.add(arr1[i])
