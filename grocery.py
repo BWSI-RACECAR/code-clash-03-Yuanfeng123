@@ -38,8 +38,10 @@ class Solution:
         arr2 = str2.split(" ")
         res = {}
         for i in range(len(arr1)):
+            arr1[i] = arr1[i].trim("\r")
             res.add(arr1[i])
         for j in range(len(arr2)):
+            arr2[j] = arr2[j].trim("\r")
             res.add(arr2[j])
         return list(res)
 
